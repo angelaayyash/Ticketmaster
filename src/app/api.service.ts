@@ -7,25 +7,50 @@ import { HttpClient } from "@angular/common/http";
 export class ApiService {
   API_KEY: string = "YfUbfjRlrVrT0XeD2J23dGBUE6xTvMJ2";
   constructor(private http: HttpClient) {}
-  getData(
-    startDateTime: string = "2020-02-21T00:00:00Z",
-    endDateTime: string = "2020-02-28T00:00:00Z",
-    keyword: string = "tigers",
-    city: string = "detroit"
-  ) {
+
+  getData(queryParams) {
+    let parameters: any = {
+      size: "25",
+      apikey: this.API_KEY,
+      sort: "date,asc"
+    };
+    if (queryParams.keyword) {
+      parameters.keyword = queryParams.keyword;
+    }
+    if (queryParams.city) {
+      parameters.city = queryParams.city;
+    }
+    if (queryParams.startDateTime) {
+      parameters.startDateTime = queryParams.startDateTime + "T00:00:00Z";
+    }
+    if (queryParams.endDateTime) {
+      parameters.endDateTime = queryParams.endDateTime + "T00:00:00Z";
+    }
     return this.http.get(
       "https://app.ticketmaster.com/discovery/v2/events.json?",
       {
-        params: {
-          apikey: this.API_KEY,
-          startDateTime: startDateTime + "T00:00:00Z",
-          endDateTime: endDateTime + "T00:00:00Z",
-          keyword: keyword,
-          city: city
-        }
+        params: parameters
       }
     );
   }
-}
 
-// T00:00:00Z
+  // getData(
+  //   startDateTime: string = "",
+  //   endDateTime: string = "",
+  //   keyword: string = "",
+  //   city: string = ""
+  // ) {
+  //   return this.http.get(
+  //     "https://app.ticketmaster.com/discovery/v2/events.json?",
+  //     {
+  //       params: {
+  //         apikey: this.API_KEY,
+  //         startDateTime: startDateTime + "T00:00:00Z",
+  //         endDateTime: endDateTime + "T00:00:00Z",
+  //         keyword: keyword,
+  //         city: city
+  //       }
+  //     }
+  //   );
+  // }
+}

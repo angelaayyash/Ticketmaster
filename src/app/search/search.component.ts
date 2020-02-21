@@ -19,28 +19,28 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(response => {
-      this.service
-        .getData(
-          response.startDateTime,
-          response.endDateTime,
-          response.keyword,
-          response.city
-        )
-        .subscribe(data => {
-          // this.data = data;
-          console.log(data);
-        });
+      this.service.getData({ response }).subscribe(data => {
+        console.log(data);
+      });
     });
   }
 
-  search(form: NgForm) {
+  search(form: any) {
+    let parameters: any = {};
+    if (form.value.keyword) {
+      parameters.keyword = form.value.keyword;
+    }
+    if (form.value.city) {
+      parameters.city = form.value.city;
+    }
+    if (form.value.startDateTime) {
+      parameters.startDateTime = form.value.startDateTime;
+    }
+    if (form.value.endDateTime) {
+      parameters.endDateTime = form.value.endDateTime;
+    }
     this.router.navigate(["search"], {
-      queryParams: {
-        startDateTime: form.value.startDateTime,
-        endDateTime: form.value.endDateTime,
-        keyword: form.value.keyword,
-        city: form.value.city
-      }
+      queryParams: parameters
     });
   }
 }
