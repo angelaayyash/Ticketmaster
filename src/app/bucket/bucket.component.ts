@@ -13,4 +13,7 @@ export class BucketComponent implements OnInit {
   ngOnInit(): void {
     this.favorites = this.service.getFavorites();
   }
+  deleteFavorite(index: number) {
+    this.service.deleteFavorite(index);
+  }
 }

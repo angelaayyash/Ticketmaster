@@ -10,13 +10,14 @@ export class ApiService {
   constructor(private http: HttpClient) {}
 
   addToFavorites(favorite: any) {
-    this.favorites.push(favorite)
+    this.favorites.push(favorite);
   }
 
-  onDelete() {
-    // this.favorites.remove()
+  deleteFavorite(favorite: number) {
+    this.favorites.splice(favorite, 1);
   }
-  getFavorites(){
+
+  getFavorites() {
     return this.favorites;
   }
   getData(queryParams) {

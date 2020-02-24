@@ -1,10 +1,11 @@
 <app-header></app-header>
-<p>bucket works!</p>
 
-<div *ngFor="let event of favorites; index as i" class="card">
-  <img src="{{ event.images[1].url }}" alt="pic" />
-  <p>{{ event?.name }}</p>
-  <!-- <button (click)="addToFavorites(event)" class="love"> -->
-  <i class="fas fa-heart"></i>
-  <!-- </!--> -->
+<div class="container">
+  <div *ngFor="let event of favorites; index as i" class="card">
+    <img src="{{ event.images[1].url }}" alt="pic" />
+    <p>{{ event?.name }}</p>
+    <button (click)="deleteFavorite(i)">
+      <i class="fas fa-heart-broken"></i>
+    </button>
+  </div>
 </div>
