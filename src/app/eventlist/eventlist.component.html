@@ -1,2 +1,4 @@
-<app-header></app-header>
-<p>eventlist works!</p>
+<div *ngFor="let event of eventList">
+  <p>{{ event.name }}</p>
+  <img src="{{ event.images[0].url }}" alt="pic" />
+</div>

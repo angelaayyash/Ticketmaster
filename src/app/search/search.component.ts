@@ -9,7 +9,7 @@ import { ApiService } from "../api.service";
   styleUrls: ["./search.component.css"]
 })
 export class SearchComponent implements OnInit {
-  data: any;
+  events: any;
 
   constructor(
     private router: Router,
@@ -21,6 +21,8 @@ export class SearchComponent implements OnInit {
     this.route.queryParams.subscribe(response => {
       this.service.getData({ response }).subscribe(data => {
         console.log(data);
+        console.log(data["_embedded"].events);
+        this.events = data["_embedded"].events;
       });
     });
   }
