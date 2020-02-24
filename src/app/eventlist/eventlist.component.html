@@ -2,5 +2,8 @@
   <div *ngFor="let event of eventList" class="card">
     <img src="{{ event.images[1].url }}" alt="pic" />
     <p>{{ event?.name }}</p>
+    <button (click)="addToFavorites(event)">Favorites
+     
+    </button>
   </div>
 </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from "@angular/core";
+import { ApiService } from '../api.service';
 
 @Component({
   selector: "app-eventlist",
@@ -7,7 +8,9 @@ import { Component, OnInit, Input } from "@angular/core";
 })
 export class EventlistComponent implements OnInit {
   @Input() eventList: any;
-  constructor() {}
-
+  constructor(private service: ApiService) {}
+addToFavorites(favorite: any) {
+  this.service.addToFavorites(favorite)
+}
   ngOnInit(): void {}
 }
