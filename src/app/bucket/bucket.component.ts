@@ -7,7 +7,7 @@ import { ApiService } from "../api.service";
   styleUrls: ["./bucket.component.css"]
 })
 export class BucketComponent implements OnInit {
-  favorites: any[];
+  favorites: any[] = [];
   constructor(private service: ApiService) {}
 
   ngOnInit(): void {

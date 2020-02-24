@@ -6,13 +6,16 @@ import { HttpClient } from "@angular/common/http";
 })
 export class ApiService {
   API_KEY: string = "YfUbfjRlrVrT0XeD2J23dGBUE6xTvMJ2";
-  favorites: any[];
+  favorites: any[] = [];
   constructor(private http: HttpClient) {}
 
   addToFavorites(favorite: any) {
     this.favorites.push(favorite)
   }
 
+  onDelete() {
+    // this.favorites.remove()
+  }
   getFavorites(){
     return this.favorites;
   }
