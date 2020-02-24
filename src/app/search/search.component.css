@@ -1,13 +1,26 @@
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h2 {
+  font-family: "Ubuntu Condensed";
+}
 .form-container {
   display: flex;
   justify-content: center;
   flex-direction: column;
   border: 1px solid black;
-  width: 50%;
+  width: 75%;
+  align-items: left;
+  padding: 10px;
 }
 
 form {
   display: flex;
   justify-content: center;
   flex-direction: column;
+  margin: 20px;
+  font-family: "Ubuntu Condensed";
 }

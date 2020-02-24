@@ -29,4 +29,6 @@ img {
   color: red;
   border: black;
   border-radius: 10px;
+  padding: 5px;
+  position: absolute;
 }
