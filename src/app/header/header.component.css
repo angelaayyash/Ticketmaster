@@ -1,0 +1,14 @@
+nav {
+  background-color: blueviolet;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+a {
+  color: white;
+  font-family: "Ubuntu Condensed";
+  text-decoration: none;
+  margin: 10px;
+}
