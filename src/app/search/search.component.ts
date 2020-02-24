@@ -19,7 +19,7 @@ export class SearchComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(response => {
-      this.service.getData({ response }).subscribe(data => {
+      this.service.getData(response).subscribe(data => {
         console.log(data);
         console.log(data["_embedded"].events);
         this.events = data["_embedded"].events;
