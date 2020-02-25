@@ -6,11 +6,12 @@ nav {
   padding: 10px;
 }
 h3 {
+  font-family: "Montserrat Subrayada";
   font-size: 24px;
 }
 a {
   color: white;
-  font-family: "Ubuntu Condensed";
+  font-family: "Montserrat Subrayada";
   text-decoration: none;
   margin: 10px;
 }
