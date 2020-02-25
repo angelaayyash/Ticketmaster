@@ -1,7 +1,7 @@
 <app-header></app-header>
-<div class="wrapper">
+<div class="hero-image"></div>
   <main>
-    <h2>Unforgettable Starts Here!</h2>
+    <h2>Hub for Schlubs</h2>
     <div class="form-container">
       <form #eventForm="ngForm" (ngSubmit)="search(eventForm)">
         <label for="city">Location</label>
@@ -41,4 +41,4 @@
     </div>
     <app-eventlist [eventList]="events"></app-eventlist>
   </main>
-</div>
+

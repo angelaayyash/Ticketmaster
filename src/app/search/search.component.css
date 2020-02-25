@@ -1,49 +1,54 @@
 main {
+  background-image: url("/assets/concert.png");
+  height: 50%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fcfcfc;
+  background-color: white;
 }
 h2 {
+  justify-content: center;
   font-family: "Merriweather Sans";
-  color: #fb9361;
+  color: black;
+  font-size: 40px;
 }
 .form-container {
-  display: flex;
+  flex-direction: row;
   justify-content: center;
-  flex-direction: column;
-  border: 1px solid black;
-  width: 50%;
-  border-radius: 20px;
-  align-items: left;
-  padding: 10px;
-  background-color: #fdca1a;
+  box-shadow: black;
+  width: 75%;
+  padding: 5px;
+  background-color: white;
 }
 
 form {
   display: flex;
-  justify-content: center;
-  flex-direction: column;
+  align-items: center;
+  flex-direction: row;
   margin: 20px;
   font-family: "Ubuntu Condensed";
-  font-size: 24px;
+  font-size: 16px;
   box-shadow: rgba(0, 0, 0, 0.7);
 }
 
 input {
-  padding: 10px;
-  border-radius: 10px;
+  padding: 5px;
+  border-radius: 2px;
   margin: 5px;
   font-family: "Ubuntu Condensed";
-  font-size: small;
+  font-size: 14px;
 }
 
 .search {
-  padding: 10px;
-  border-radius: 10px;
+  padding: 5px;
+  border-radius: 5px;
   margin: 5px;
   color: white;
   font-size: 16px;
-  background-color: darkslategrey;
+  background-color: black;
 }
