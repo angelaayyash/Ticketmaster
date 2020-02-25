@@ -25,6 +25,7 @@ export class SearchComponent implements OnInit {
         this.events = data["_embedded"].events;
       });
     });
+    this.search({ value: { city: "detroit" } });
   }
 
   search(form: any) {
