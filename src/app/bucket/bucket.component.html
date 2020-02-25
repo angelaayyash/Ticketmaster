@@ -3,9 +3,9 @@
   <div class="container">
     <div *ngFor="let event of favorites; index as i" class="card">
       <img src="{{ event.images[1].url }}" alt="pic" />
-      <p>{{ event?.name }}</p>
+      <p class="title">{{ event?.name }}</p>
       <button class="remove" (click)="deleteFavorite(i)">
-        <i class="fas fa-heart-broken"></i>
+        <i class="fas fa-times"></i>
       </button>
     </div>
   </div>

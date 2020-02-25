@@ -22,7 +22,7 @@ p {
   z-index: 3;
   color: white;
   position: absolute;
-  top: 0;
+  bottom: 0;
   left: 0;
 }
 
@@ -33,19 +33,18 @@ img {
   border-radius: 5px;
 }
 .remove {
-  color: red;
-  background: none;
+  color: #ffb30f;
+  background-color: white;
+  border-radius: 50%;
   border: none;
   position: absolute;
   right: -10px;
   bottom: -10px;
-  font-size: 24px;
+  font-size: 30px;
+  z-index: 20;
 }
 
-.love:active {
-  transform: translateY(4px);
-}
-.name {
+.title {
   padding: 30px;
   z-index: 3;
   background-color: rgba(0, 0, 0, 0.4);
@@ -82,7 +81,7 @@ img {
     padding-bottom: 20px;
     background-color: black;
   }
-  
+
   .card {
     width: 250px;
     height: 400px;
@@ -90,35 +89,35 @@ img {
     position: relative;
     border: 2px white solid;
   }
-  
+
   p {
     padding: 30px;
     z-index: 3;
     color: white;
     position: absolute;
-    top: 0;
+    bottom: 0;
     left: 0;
   }
-  
+
   img {
     width: 250px;
     height: 400px;
     object-fit: cover;
     border-radius: 5px;
   }
+
   .remove {
-    color: red;
-    background: none;
+    color: #ffb30f;
+    background-color: white;
+    border-radius: 50%;
     border: none;
     position: absolute;
     right: -10px;
     bottom: -10px;
     font-size: 24px;
+    z-index: 20;
   }
-  
-  .love:active {
-    transform: translateY(4px);
-  }
+
   .name {
     padding: 30px;
     z-index: 3;
@@ -133,7 +132,7 @@ img {
     width: 190px;
     text-align: center;
   }
-  
+
   .infoDiv {
     width: 250px;
     height: 400px;
@@ -144,5 +143,4 @@ img {
     background-color: white;
     z-index: 3;
   }
-
 }

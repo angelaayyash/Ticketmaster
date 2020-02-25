@@ -1,7 +1,7 @@
 <app-header></app-header>
 <div class="hero-image"></div>
 <main>
-  <h2>Hub for Schlubs</h2>
+  <h2>THE CHUB STARTS HERE</h2>
   <div class="form-container">
     <form #eventForm="ngForm" (ngSubmit)="search(eventForm)">
       <label for="city">Location</label>
@@ -9,7 +9,7 @@
         type="text"
         id="city"
         name="city"
-        placeholder="Detroit"
+        placeholder="Enter your city"
         ngModel
       />
       <label for="startDate">Start Date</label>
@@ -41,4 +41,3 @@
   </div>
 </main>
 <app-eventlist [eventList]="events"></app-eventlist>
-

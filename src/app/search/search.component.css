@@ -8,7 +8,6 @@ main {
   position: relative;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: white;
 }
@@ -32,7 +31,7 @@ form {
   align-items: center;
   flex-direction: row;
   margin: 10px;
-  font-family: "Ubuntu Condensed";
+  font-family: "News Cycle";
   font-size: 16px;
   box-shadow: rgba(0, 0, 0, 0.7);
 }
@@ -41,17 +40,19 @@ input {
   padding: 5px;
   border-radius: 2px;
   margin: 5px;
-  font-family: "Ubuntu Condensed";
+  font-family: "News Cycle";
   font-size: 14px;
 }
 
 .search {
-  padding: 5px;
+  padding: 10px;
   border-radius: 5px;
   margin: 5px;
-  color: white;
+  color: black;
   font-size: 16px;
-  background-color: black;
+  font-weight: bold;
+  background-color: #ffb30f;
+  width: 15%;
 }
 @media only screen and (max-width: 768px) {
   main {
@@ -64,8 +65,7 @@ input {
     position: relative;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: left;
     background-color: white;
   }
   h2 {
@@ -73,41 +73,47 @@ input {
     font-family: "News Cycle";
     color: black;
     font-size: 40px;
+    font-weight: bold;
   }
   .form-container {
-    flex-direction: row;
-    justify-content: center;
+    display: flex;
     box-shadow: black;
-    width: 100%;
+    width: 75%;
     padding: 5px;
+    border-radius: 20px;
     background-color: white;
   }
 
   form {
     display: flex;
-    align-items: center;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: column;
     margin: 10px;
-    font-family: "Ubuntu Condensed";
+    font-family: "News Cycle";
     font-size: 16px;
     box-shadow: rgba(0, 0, 0, 0.7);
   }
-
-  input {
-    padding: 5px;
-    border-radius: 2px;
-    margin: 5px;
-    font-family: "Ubuntu Condensed";
-    font-size: 14px;
+  label {
+    font-size: 18px;
+    width: 100%;
   }
-
-  .search {
+  input {
     padding: 5px;
     border-radius: 5px;
     margin: 5px;
-    color: white;
-    font-size: 16px;
-    background-color: black;
+    font-family: "News Cycle";
+    font-size: 14px;
+    width: 300px;
+  }
+
+  .search {
+    padding: 10px;
+    border-radius: 5px;
+    margin: 5px;
+    color: black;
+    font-weight: bold;
+    font-size: 14px;
+    margin-top: 10px;
+    background-color: #ffb30f;
+    width: 320px;
   }
 }

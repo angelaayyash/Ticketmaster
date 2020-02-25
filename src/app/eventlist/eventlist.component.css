@@ -49,21 +49,23 @@ img {
 }
 
 .love {
-  color: red;
-  background: none;
+  color: #ffb30f;
   border: none;
+  background: none;
   position: absolute;
   right: -10px;
   bottom: -10px;
-  font-size: 30px;
+  font-size: 25px;
   z-index: 20;
+  background-color: white;
+  border-radius: 50%;
 }
 .love:active {
   transform: translateY(4px);
 }
 
 .love:focus {
-  color: green;
+  color: black;
 }
 
 @media only screen and (max-width: 768px) {
@@ -77,15 +79,15 @@ img {
     padding-bottom: 20px;
     background-color: black;
   }
-  
+
   .card {
     width: 250px;
     height: 400px;
-    margin: 10px;
+    margin: 5px;
     position: relative;
     border: 2px white solid;
   }
-  
+
   .name {
     padding: 30px;
     z-index: 3;
@@ -116,23 +118,24 @@ img {
     object-fit: cover;
     border-radius: 5px;
   }
-  
+
   .love {
-    color: red;
-    background: none;
+    color: #ffb30f;
     border: none;
+    background: none;
     position: absolute;
     right: -10px;
     bottom: -10px;
-    font-size: 30px;
+    font-size: 25px;
     z-index: 20;
+    background-color: white;
+    border-radius: 50%;
   }
   .love:active {
     transform: translateY(4px);
   }
-  
+
   .love:focus {
-    color: green;
+    color: black;
   }
-  
 }
