@@ -1,9 +1,10 @@
 main {
+  padding-bottom: 120px;
   background-image: url("/assets/concert.png");
   height: 25%;
   width: 100%;
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -51,4 +52,62 @@ input {
   color: white;
   font-size: 16px;
   background-color: black;
+}
+@media only screen and (max-width: 768px) {
+  main {
+    padding-bottom: 120px;
+    background-image: url("/assets/concert.png");
+    height: 25%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+  }
+  h2 {
+    justify-content: center;
+    font-family: "News Cycle";
+    color: black;
+    font-size: 40px;
+  }
+  .form-container {
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: black;
+    width: 100%;
+    padding: 5px;
+    background-color: white;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px;
+    font-family: "Ubuntu Condensed";
+    font-size: 16px;
+    box-shadow: rgba(0, 0, 0, 0.7);
+  }
+
+  input {
+    padding: 5px;
+    border-radius: 2px;
+    margin: 5px;
+    font-family: "Ubuntu Condensed";
+    font-size: 14px;
+  }
+
+  .search {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    color: white;
+    font-size: 16px;
+    background-color: black;
+  }
 }

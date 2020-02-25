@@ -23,9 +23,9 @@ export class SearchComponent implements OnInit {
         console.log(data);
         console.log(data["_embedded"].events);
         this.events = data["_embedded"].events;
-      });
+      });this.search({ value: { city: "detroit" } });
     });
-    this.search({ value: { city: "detroit" } });
+    
   }
 
   search(form: any) {
