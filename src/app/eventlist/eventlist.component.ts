@@ -8,10 +8,15 @@ import { ApiService } from "../api.service";
 })
 export class EventlistComponent implements OnInit {
   @Input() eventList: any;
+  showIndex: number;
   constructor(private service: ApiService) {}
 
   addToFavorites(favorite: any) {
     this.service.addToFavorites(favorite);
   }
+  showMore(index: number) {
+    this.showIndex = index;
+  }
+
   ngOnInit(): void {}
 }

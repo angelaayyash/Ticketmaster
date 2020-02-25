@@ -13,7 +13,7 @@ main {
 }
 h2 {
   justify-content: center;
-  font-family: "Merriweather Sans";
+  font-family: "News Cycle";
   color: black;
   font-size: 40px;
 }
@@ -30,7 +30,7 @@ form {
   display: flex;
   align-items: center;
   flex-direction: row;
-  margin: 20px;
+  margin: 10px;
   font-family: "Ubuntu Condensed";
   font-size: 16px;
   box-shadow: rgba(0, 0, 0, 0.7);

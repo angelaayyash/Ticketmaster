@@ -1,9 +1,13 @@
 <div class="container">
-  <div *ngFor="let event of eventList" class="card">
+  <div *ngFor="let event of eventList" class="card" (click)="showMore(i)">
     <img src="{{ event.images[1].url }}" alt="pic" />
-    <p>{{ event?.name }}</p>
+    <p class="name">{{ event?.name }}</p>
     <button (click)="addToFavorites(event)" class="love">
       <i class="fas fa-heart"></i>
     </button>
+    <div class="infoDiv" *ngIf="showIndex === i">
+      <p *ngIf="event.info">{{ event.info }}</p>
+      <p *ngIf="!event.info">No Information Available</p>
+    </div>
   </div>
 </div>
