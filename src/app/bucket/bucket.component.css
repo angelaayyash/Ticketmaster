@@ -1,4 +1,17 @@
+/* .hero {
+  background-image: url("/assets/favorites.jpg");
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
 .container {
+  background-image: url("/assets/favorites.jpg");
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -23,4 +36,17 @@ p {
 img {
   width: 250px;
   height: 300px;
+}
+.remove {
+  color: red;
+  background: none;
+  border: none;
+  position: absolute;
+  right: -10px;
+  bottom: -10px;
+  font-size: 24px;
+}
+
+.love:active {
+  transform: translateY(4px);
 }

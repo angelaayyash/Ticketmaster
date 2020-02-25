@@ -31,11 +31,14 @@ img {
 
 .love {
   color: red;
-  background-color: silver;
-  border: black;
-  border-radius: 100%;
+  background: none;
+  border: none;
   position: absolute;
   right: -10px;
   bottom: -10px;
-  font-size: 14px;
+  font-size: 24px;
+}
+
+.love:active {
+  transform: translateY(4px);
 }
