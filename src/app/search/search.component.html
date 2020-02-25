@@ -1,42 +1,44 @@
 <app-header></app-header>
-<main>
-  <h2>Unforgettable Starts Here!</h2>
-  <div class="form-container">
-    <form #eventForm="ngForm" (ngSubmit)="search(eventForm)">
-      <label for="city">Location</label>
-      <input
-        type="text"
-        id="city"
-        name="city"
-        placeholder="Enter your city"
-        ngModel
-      />
-      <label for="startDate">Start Date</label>
-      <input
-        type="date"
-        id="startDate"
-        name="startDateTime"
-        placeholder="Enter your start date"
-        ngModel
-      />
-      <label for="endDate">End Date</label>
-      <input
-        type="date"
-        id="endDate"
-        name="endDateTime"
-        placeholder="Enter your end date"
-        ngModel
-      />
-      <label for="keyword">Keyword</label>
-      <input
-        type="text"
-        id="keyword"
-        name="keyword"
-        placeholder="Keyword"
-        ngModel
-      />
-      <button class="search">Search</button>
-    </form>
-  </div>
-  <app-eventlist [eventList]="events"></app-eventlist>
-</main>
+<div class="wrapper">
+  <main>
+    <h2>Unforgettable Starts Here!</h2>
+    <div class="form-container">
+      <form #eventForm="ngForm" (ngSubmit)="search(eventForm)">
+        <label for="city">Location</label>
+        <input
+          type="text"
+          id="city"
+          name="city"
+          placeholder="Enter your city"
+          ngModel
+        />
+        <label for="startDate">Start Date</label>
+        <input
+          type="date"
+          id="startDate"
+          name="startDateTime"
+          placeholder="Enter your start date"
+          ngModel
+        />
+        <label for="endDate">End Date</label>
+        <input
+          type="date"
+          id="endDate"
+          name="endDateTime"
+          placeholder="Enter your end date"
+          ngModel
+        />
+        <label for="keyword">Keyword</label>
+        <input
+          type="text"
+          id="keyword"
+          name="keyword"
+          placeholder="Keyword"
+          ngModel
+        />
+        <button class="search">Search</button>
+      </form>
+    </div>
+    <app-eventlist [eventList]="events"></app-eventlist>
+  </main>
+</div>

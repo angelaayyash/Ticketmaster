@@ -1,5 +1,5 @@
 nav {
-  background-color: #370a98;
+  background-image: linear-gradient(to bottom right, #fdca1a, #fa8071, rgb(161, 50, 216));
   display: flex;
   flex-direction: row;
   justify-content: space-between;

@@ -3,9 +3,11 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background-color: #fcfcfc;
 }
 h2 {
-  font-family: "Ubuntu Condensed";
+  font-family: "Merriweather Sans";
+  color: #fb9361;
 }
 .form-container {
   display: flex;
@@ -16,6 +18,7 @@ h2 {
   border-radius: 20px;
   align-items: left;
   padding: 10px;
+  background-color: #fdca1a;
 }
 
 form {
@@ -23,7 +26,7 @@ form {
   justify-content: center;
   flex-direction: column;
   margin: 20px;
-  font-family: "Yanone Kaffeesatz";
+  font-family: "Ubuntu Condensed";
   font-size: 24px;
   box-shadow: rgba(0, 0, 0, 0.7);
 }
@@ -32,6 +35,8 @@ input {
   padding: 10px;
   border-radius: 10px;
   margin: 5px;
+  font-family: "Ubuntu Condensed";
+  font-size: small;
 }
 
 .search {
