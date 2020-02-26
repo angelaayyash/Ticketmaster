@@ -13,7 +13,11 @@ export class EventlistComponent implements OnInit {
   constructor(private service: ApiService) {}
 
   showDetails(event: any) {
-    event.isClicked = true;
+    if (event.isClicked) {
+      event.isClicked = false;
+    } else {
+      event.isClicked = true;
+    }
   }
 
   addToFavorites(favorite: any) {

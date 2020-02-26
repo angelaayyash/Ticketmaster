@@ -17,12 +17,23 @@
 </div> -->
 <div class="wrapper">
   <section class="container" *ngFor="let event of eventList; index as i">
-    <div class="card" [ngClass]="{ flipped: event.isClicked }">
-      <div class="front" (click)="showDetails(event)">
+    <div class="card" [ngClass]="{ flipped: event.isClicked === true }">
+      <div class="front">
         <img src="{{ event.images[1].url }}" alt="pic" />
-        <button>More Deets</button>
+        <p class="name">{{ event?.name }}</p>
+        <button class="info" (click)="showDetails(event)">
+          <i class="fas fa-info"></i>
+        </button>
       </div>
-      <div class="back">2</div>
+      <div class="back" (click)="showDetails(event)">
+        <p>{{ event.dates.start.localDate }}</p>
+        <p>{{ event._embedded.venues[0].name }}</p>
+        <p>{{ event.info }}</p>
+        <p class="eventInfo" *ngIf="!event.info">No Information Available</p>
+      </div>
     </div>
+    <button (click)="addToFavorites(event)" class="love">
+      <i class="fas fa-bookmark"></i>
+    </button>
   </section>
 </div>
