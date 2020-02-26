@@ -1,4 +1,4 @@
-<div class="container">
+<!-- <div class="container">
   <div
     *ngFor="let event of eventList; index as i"
     class="card"
@@ -14,4 +14,15 @@
       <i class="fas fa-bookmark"></i>
     </button>
   </div>
+</div> -->
+<div class="wrapper">
+  <section class="container" *ngFor="let event of eventList; index as i">
+    <div class="card" [ngClass]="{ flipped: event.isClicked }">
+      <div class="front" (click)="showDetails(event)">
+        <img src="{{ event.images[1].url }}" alt="pic" />
+        <button>More Deets</button>
+      </div>
+      <div class="back">2</div>
+    </div>
+  </section>
 </div>

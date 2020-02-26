@@ -9,7 +9,12 @@ import { ApiService } from "../api.service";
 export class EventlistComponent implements OnInit {
   @Input() eventList: any;
   showIndex: number;
+
   constructor(private service: ApiService) {}
+
+  showDetails(event: any) {
+    event.isClicked = true;
+  }
 
   addToFavorites(favorite: any) {
     this.service.addToFavorites(favorite);
